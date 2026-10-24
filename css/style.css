@@ -94,7 +94,6 @@ h1, h2, h3 { letter-spacing: -0.03em; }
 }
 .nav__inner { display: flex; align-items: center; gap: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -0.02em; font-size: 18px; }
-.brand img { border-radius: 9px; }
 .nav__links { display: flex; gap: 28px; margin-left: auto; font-weight: 600; font-size: 15px; color: var(--ink-2); }
 .nav__links a:hover { color: var(--ink); }
 
@@ -111,7 +110,7 @@ h1, h2, h3 { letter-spacing: -0.03em; }
 .sticky-cta.is-visible { transform: translateY(0); box-shadow: 0 6px 24px rgba(16, 24, 40, 0.06); }
 .sticky-cta__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; padding-block: 12px; }
 .sticky-cta__app { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.sticky-cta__app img { border-radius: 11px; flex: none; }
+.sticky-cta__app img { flex: none; }
 .sticky-cta__app strong { display: block; font-size: 16px; }
 .sticky-cta__app span { display: block; font-size: 13px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .sticky-cta__buttons { display: flex; gap: 8px; flex: none; }
