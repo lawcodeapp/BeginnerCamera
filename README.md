@@ -30,7 +30,7 @@ The domain is set to `www.beginnercam.com` (canonical links, Open Graph, sitemap
 ## Also replace
 
 - **Store badges.** The buttons are styled to look like the store badges. Apple and Google ask you to use their official artwork, so swap them in before launch: Apple's badge from <https://developer.apple.com/app-store/marketing/guidelines/> (App Store marketing tools) and Google's from <https://play.google.com/intl/en_us/badges/>.
-- **Logo.** The golden spiral camera icon. `assets/icon.webp` (256px) is used on the page, `assets/icon-192.png` / `icon-512.png` in the web manifest, `apple-touch-icon.png` (180px, solid background) for iOS and `favicon.ico` (16/32/48px) for browser tabs. All are exported from the 1254px source PNG.
+- **Logo.** The golden ratio camera icon: `assets/icon.webp` (256px, rounded corners baked in) on the page, `assets/icon-192.png` / `icon-512.png` in the web manifest and `apple-touch-icon.png` (180px, square; iOS rounds it). The favicon is the separate golden spiral emblem on a navy circle: `favicon.ico` (16/32/48px) and `assets/favicon-96.png`, with the gold lines thickened at small sizes so they stay visible.
 - **Screenshots.** `assets/screens/*.jpg` are 600 px wide captures from the simulator. Retake them when the design changes. Photos showing people need model releases.
 - **Privacy policy and terms.** Final for the app as of October 22, 2026 (no account, nothing uploaded, RevenueCat for purchases, local notifications, offer times in Keychain and iCloud). Update them whenever the app starts handling data differently (for example analytics or v2 ads), and keep them in step with the App Store privacy labels.
 
