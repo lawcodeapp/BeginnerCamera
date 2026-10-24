@@ -262,6 +262,17 @@ h1, h2, h3 { letter-spacing: -0.03em; }
 .legal a { text-decoration: underline; }
 .legal .note { background: var(--gold-soft); border-radius: 14px; padding: 14px 18px; color: var(--ink); }
 
+/* Support page */
+.support-contact { background: var(--soft); border-radius: var(--radius); padding: 28px 28px 22px; margin-bottom: 8px; }
+.support-contact h2 { margin-top: 0; }
+.support-contact .btn { margin: 10px 0 8px; text-decoration: none; }
+.legal .support-contact__email { color: var(--ink-3); font-size: 15px; margin-bottom: 18px; }
+.legal .faq details { background: var(--soft); box-shadow: none; }
+.legal .faq summary { font-size: 16px; padding: 18px 0; }
+.legal .faq details p { padding-bottom: 18px; }
+.support-more { margin-top: 40px; }
+@media (max-width: 720px) { .support-contact { padding: 22px 20px 16px; } }
+
 /* Tablet */
 @media (max-width: 960px) {
   .hero__grid { grid-template-columns: 1fr; text-align: center; }

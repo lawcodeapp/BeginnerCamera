@@ -25,7 +25,7 @@ Search the folder for `YOUR_` and replace every match:
 
 Until a store link is filled in, its button shows "· soon" and is not clickable, so the Google Play buttons (hero and final section) can stay as they are until Android ships. The sticky bar has only the App Store button.
 
-The domain is set to `www.beginnercam.com` (canonical links, Open Graph, sitemap, robots, and the `CNAME` file). The app already links to `https://www.beginnercam.com/privacy.html`; its Terms of Use open Apple's Standard EULA, and Support opens an email to sopheareachte@gmail.com.
+The domain is set to `www.beginnercam.com` (canonical links, Open Graph, sitemap, robots, and the `CNAME` file). The app already links to `https://www.beginnercam.com/privacy.html`; its Terms of Use open Apple's Standard EULA, and Support opens an email to sopheareachte@gmail.com. The support page is at `https://www.beginnercam.com/support`; use it as the App Store Support URL.
 
 ## Also replace
 
