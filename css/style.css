@@ -260,7 +260,7 @@ h1, h2, h3 { letter-spacing: -0.03em; }
 .legal p, .legal li { color: var(--ink-2); line-height: 1.7; }
 .legal ul { padding-left: 22px; }
 .legal a { text-decoration: underline; }
-.legal .note { background: var(--gold-soft); border-radius: 14px; padding: 14px 18px; color: var(--ink); }
+.legal .note { background: var(--gold-soft); border-radius: 14px; padding: 14px 18px; color: var(--ink); margin: 20px 0; }
 
 /* Support page */
 .support-contact { background: var(--soft); border-radius: var(--radius); padding: 28px 28px 22px; margin-bottom: 8px; }
