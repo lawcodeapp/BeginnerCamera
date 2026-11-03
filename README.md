@@ -20,10 +20,10 @@ Search the folder for `YOUR_` and replace every match:
 
 | Placeholder | Replace with | Where |
 |---|---|---|
-| `YOUR_APP_ID` | the number in your App Store link (`https://apps.apple.com/app/id1234567890`) | download buttons, Smart App Banner, structured data |
-| `YOUR_PACKAGE` | your Android package name, once the app is on Google Play | Google Play buttons |
+| `YOUR_APP_ID` | the number in your App Store link (`https://apps.apple.com/app/id1234567890`) | App Store buttons, Smart App Banner, structured data `downloadUrl` (currently Google Play; add the App Store link alongside it) |
+| ~~`YOUR_PACKAGE`~~ | done: `com.reach.beginnercamera` | Google Play buttons |
 
-Until a store link is filled in, its button shows "· soon" and is not clickable, so the Google Play buttons (hero and final section) can stay as they are until Android ships. The sticky bar has only the App Store button.
+Until a store link is filled in, its button shows "· soon" and is not clickable, so the App Store buttons can stay as they are until the iOS app is approved. The sticky bar shows only the store for the visitor's phone (both on desktop); see `js/main.js`.
 
 The domain is set to `www.beginnercam.com` (canonical links, Open Graph, sitemap, robots, and the `CNAME` file). The app already links to `https://www.beginnercam.com/privacy.html`; its Terms of Use open Apple's Standard EULA, and Support opens an email to sopheareachte@gmail.com. The support page is at `https://www.beginnercam.com/support`; use it as the App Store Support URL.
 

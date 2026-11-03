@@ -15,6 +15,18 @@
     }
   });
 
+  // On a phone the sticky bar keeps only the store for that phone, so the
+  // bar fits small screens. Desktop keeps both.
+  var ua = navigator.userAgent;
+  var other = /Android/i.test(ua) ? 'apple'
+    : /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? 'google'
+    : null;
+  if (other) {
+    document.querySelectorAll('#sticky-cta [data-store="' + other + '"]').forEach(function (link) {
+      link.remove();
+    });
+  }
+
   // Sticky bar: slides in once the hero's download buttons have scrolled
   // above the top of the screen, and out again when they come back.
   var bar = document.getElementById('sticky-cta');
