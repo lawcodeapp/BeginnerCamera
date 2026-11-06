@@ -25,7 +25,7 @@ Search the folder for `YOUR_` and replace every match:
 
 Until a store link is filled in, its button shows "· soon" and is not clickable, so the App Store buttons can stay as they are until the iOS app is approved. The sticky bar shows only the store for the visitor's phone (both on desktop); see `js/main.js`.
 
-The domain is set to `www.beginnercam.com` (canonical links, Open Graph, sitemap, robots, and the `CNAME` file). The app already links to `https://www.beginnercam.com/privacy.html`; its Terms of Use open Apple's Standard EULA, and Support opens an email to sopheareachte@gmail.com. The support page is at `https://www.beginnercam.com/support`; use it as the App Store Support URL.
+The site lives at `beginnercam.com` (the `CNAME` file); `www.beginnercam.com` redirects there. Canonical links, Open Graph, the sitemap and robots.txt all use `https://beginnercam.com`, so Google never sees a canonical URL that redirects (that confuses the search result, including its favicon). The app already links to `https://beginnercam.com/privacy.html`; its Terms of Use open Apple's Standard EULA, and Support opens an email to sopheareachte@gmail.com. The support page is at `https://beginnercam.com/support`; use it as the App Store Support URL.
 
 ## Also replace
 
@@ -39,14 +39,14 @@ The domain is set to `www.beginnercam.com` (canonical links, Open Graph, sitemap
 1. Create a new repository and put the **contents** of this folder at its root (so `index.html` is at the top level).
 2. Push to the `main` branch.
 3. In the repository: **Settings › Pages › Build and deployment**, choose **Deploy from a branch**, branch `main`, folder `/ (root)`, and save.
-4. Custom domain: the `CNAME` file already says `www.beginnercam.com`. In **Settings › Pages › Custom domain**, enter `www.beginnercam.com` and save. At your domain registrar, add a DNS record: `CNAME` for `www` pointing to `<your-github-user>.github.io`. To make `beginnercam.com` (without www) work too, add `A` records for the bare domain pointing to GitHub Pages' IP addresses (listed in GitHub's "Managing a custom domain" docs); GitHub then redirects it to www.
+4. Custom domain: the `CNAME` file says `beginnercam.com`. In **Settings › Pages › Custom domain**, enter `beginnercam.com` and save. At your domain registrar, add a DNS record: `CNAME` for `www` pointing to `<your-github-user>.github.io`. To make `beginnercam.com` (without www) work too, add `A` records for the bare domain pointing to GitHub Pages' IP addresses (listed in GitHub's "Managing a custom domain" docs); GitHub then redirects it to www.
 5. When the DNS check passes, tick **Enforce HTTPS**. The privacy link inside the app only works once the site is live.
 
 All links inside the site are relative, so it works both on a custom domain and under a repository path.
 
 ## After it is live
 
-- Submit `https://www.beginnercam.com/sitemap.xml` in Google Search Console.
+- Submit `https://beginnercam.com/sitemap.xml` in Google Search Console.
 - Check the share preview with a link debugger (for example the Facebook Sharing Debugger or LinkedIn Post Inspector).
 - Run Lighthouse in Chrome DevTools for performance, accessibility and SEO.
 
