@@ -248,6 +248,12 @@ h1, h2, h3 { letter-spacing: -0.03em; }
 .footer nav { display: flex; gap: 24px; margin-left: auto; color: var(--ink-2); font-weight: 600; font-size: 15px; }
 .footer nav a:hover { color: var(--ink); }
 .footer__legal { width: 100%; color: var(--ink-3); font-size: 13px; }
+.social { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.social a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: var(--ink-2); }
+.social a:hover, .social a:focus-visible { color: var(--ink); background: var(--soft); }
+.social svg { width: 20px; height: 20px; }
+/* WebP screenshots with a JPG fallback: the <picture> adds no box. */
+picture { display: contents; }
 
 /* Scroll reveal (js/main.js adds .is-in) */
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
@@ -262,6 +268,52 @@ h1, h2, h3 { letter-spacing: -0.03em; }
 .legal ul { padding-left: 22px; }
 .legal a { text-decoration: underline; }
 .legal .note { background: var(--gold-soft); border-radius: 14px; padding: 14px 18px; color: var(--ink); margin: 20px 0; }
+
+/* Home: links to the guides */
+.learn-links { list-style: none; padding: 0; margin: 0 auto; max-width: 760px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.learn-links a { display: block; background: var(--soft); border-radius: 16px; padding: 16px 20px; font-weight: 700; }
+.learn-links a:hover { background: var(--gold-soft); }
+@media (max-width: 720px) { .learn-links { grid-template-columns: 1fr; } }
+
+/* Guides (guides/*.html): text pages with photo pairs and diagrams */
+.guide-crumb { margin-bottom: 6px; font-weight: 600; font-size: 15px; }
+.legal .guide-crumb a { text-decoration: none; color: var(--gold); }
+.legal .guide-lead { font-size: 19px; color: var(--ink); margin: 14px 0 8px; }
+.guide-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0 26px; }
+.guide-fig { margin: 0; }
+.guide-fig img { width: 100%; height: auto; border-radius: 16px; background: var(--soft); }
+.guide-fig figcaption, .guide-diagram figcaption { color: var(--ink-3); font-size: 14px; margin-top: 8px; line-height: 1.4; }
+.guide-diagram { margin: 18px auto 26px; max-width: 300px; }
+.guide-diagram--wide { max-width: 640px; }
+.guide-diagram svg { width: 100%; height: auto; display: block; }
+.guide-cta { display: flex; gap: 18px; align-items: flex-start; background: var(--soft); border-radius: var(--radius); padding: 24px; margin: 44px 0 8px; }
+.guide-cta > img { border-radius: 14px; flex: none; }
+.legal .guide-cta p { margin: 0 0 14px; }
+.legal .guide-cta .guide-cta__title { font-weight: 800; font-size: 20px; color: var(--ink); margin-bottom: 6px; }
+.legal .guide-cta a { text-decoration: none; }
+.guide-more { margin-top: 36px; }
+.guide-more ul { padding-left: 22px; }
+.guide-cards { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.legal .guide-cards li { color: var(--ink); }
+.legal .guide-card { display: block; text-decoration: none; background: var(--soft); border-radius: var(--radius); overflow: hidden; height: 100%; }
+.guide-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.guide-card__title { display: block; font-weight: 800; font-size: 19px; padding: 14px 18px 4px; }
+.guide-card__desc { display: block; color: var(--ink-2); font-size: 15px; line-height: 1.5; padding: 0 18px 18px; }
+.sheet { list-style: none; padding: 0; margin: 14px 0 8px; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
+.legal .sheet li { line-height: 1.35; font-size: 14px; }
+.sheet img { width: 100%; height: auto; border-radius: 12px; margin-bottom: 8px; }
+.sheet strong { display: block; color: var(--ink); font-size: 15px; }
+.sheet-print { margin-top: 28px; }
+@media (max-width: 720px) {
+  .guide-cards { grid-template-columns: 1fr; }
+  .guide-cta { flex-direction: column; }
+}
+@media print {
+  .nav, .footer, .guide-cta, .guide-more, .sheet-print, .skip-link { display: none !important; }
+  .legal { padding: 0; }
+  .sheet { grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .sheet li { break-inside: avoid; font-size: 10px; }
+}
 
 /* Support page */
 .support-contact { background: var(--soft); border-radius: var(--radius); padding: 28px 28px 22px; margin-bottom: 8px; }

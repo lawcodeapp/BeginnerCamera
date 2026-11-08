@@ -1,14 +1,15 @@
 // Beginner Cam website: sticky download bar, scroll reveals, gallery
-// buttons, and "coming soon" for store links that are not set yet.
+// buttons, and "coming soon" for the App Store until the iPhone app is live.
 (function () {
   'use strict';
 
   document.documentElement.classList.add('js');
 
-  // Store links still holding a placeholder (YOUR_...) show as "soon"
-  // instead of leading to a broken page. Set the real links in index.html.
-  document.querySelectorAll('[data-store]').forEach(function (link) {
-    if (link.getAttribute('href').indexOf('YOUR_') !== -1) {
+  // Set to true the day the iPhone app is on the App Store (download.html
+  // too). Until then its buttons show "soon" instead of a missing page.
+  var APP_STORE_LIVE = false;
+  document.querySelectorAll('[data-store="apple"]').forEach(function (link) {
+    if (!APP_STORE_LIVE) {
       link.classList.add('is-soon');
       link.setAttribute('aria-disabled', 'true');
       link.removeAttribute('href');
