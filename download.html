@@ -202,6 +202,9 @@
         }
       });
       if (!target || /[?&]stay\b/.test(location.search)) return;
+      // Search engine crawlers (Googlebot smartphone says "Android") stay on the page,
+      // so it can be indexed instead of being reported as "Page with redirect".
+      if (/bot|crawl|spider|slurp|Google-InspectionTool|Lighthouse|Chrome-Lighthouse/i.test(ua)) return;
       var key = 'bc-download-redirected';
       try {
         if (sessionStorage.getItem(key)) return;
