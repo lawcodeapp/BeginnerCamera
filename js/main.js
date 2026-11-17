@@ -7,7 +7,7 @@
 
   // Set to true the day the iPhone app is on the App Store (download.html
   // too). Until then its buttons show "soon" instead of a missing page.
-  var APP_STORE_LIVE = false;
+  var APP_STORE_LIVE = true;
   document.querySelectorAll('[data-store="apple"]').forEach(function (link) {
     if (!APP_STORE_LIVE) {
       link.classList.add('is-soon');

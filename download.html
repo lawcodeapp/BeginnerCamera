@@ -187,7 +187,7 @@
         : /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? 'apple'
         : null;
       // Set to true the day the iPhone app is on the App Store (js/main.js too).
-      var APP_STORE_LIVE = false;
+      var APP_STORE_LIVE = true;
       var target = null;
       document.querySelectorAll('[data-store]').forEach(function (link) {
         var ready = link.dataset.store !== 'apple' || APP_STORE_LIVE;
