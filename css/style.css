@@ -349,7 +349,8 @@ picture { display: contents; }
   .hero__facts { gap: 18px; font-size: 13px; flex-wrap: nowrap; }
   .hero__facts strong { font-size: 26px; }
   .phone--hero { transform: none; }
-  .footer nav { margin-left: 0; }
+  /* Stack the footer links one per line so none of them wrap. */
+  .footer nav { margin-left: 0; width: 100%; flex-direction: column; gap: 14px; }
   /* The sticky bar: keep the app name, one compact button per store. */
   .sticky-cta__app span { display: none; }
   .store-badge--compact .store-badge__text small { display: none; }
